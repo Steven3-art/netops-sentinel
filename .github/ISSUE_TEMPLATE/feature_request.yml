@@ -1,0 +1,68 @@
+name: Feature request
+description: Propose an improvement to NetOps Sentinel.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an improvement to NetOps Sentinel.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What problem should this feature solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior or capability you would like.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Project area
+      options:
+        - Agent orchestration
+        - Telecom Digital Lab
+        - AAA and RADIUS
+        - Evidence Store
+        - Tools
+        - Model providers
+        - Safety and approvals
+        - Evaluation
+        - API
+        - Frontend
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and evaluation
+      description: |
+        Explain how the feature could be tested or evaluated using synthetic
+        evidence or scenarios.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other relevant information.
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data safety confirmation
+      options:
+        - label: This proposal does not require publishing real customer or proprietary telecom data.
+          required: true

@@ -1,0 +1,77 @@
+name: Bug report
+description: Report a reproducible problem in NetOps Sentinel.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem.
+
+        Do not include credentials, real customer information, or proprietary
+        telecom operational data.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Describe what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reproducible sequence of steps.
+      placeholder: |
+        1. Start...
+        2. Submit...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Describe what actually happened.
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.x"
+
+  - type: input
+    id: commit
+    attributes:
+      label: NetOps Sentinel version or commit
+      placeholder: "v0.1.0 or commit hash"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: |
+        Add sanitized logs or synthetic examples if useful. Do not include
+        secrets, customer data, or proprietary operational information.
+
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Data safety confirmation
+      options:
+        - label: I have removed secrets and real telecom/customer data from this report.
+          required: true
