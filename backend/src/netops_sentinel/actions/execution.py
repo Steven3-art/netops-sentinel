@@ -1,6 +1,7 @@
 """Controlled execution of approved synthetic actions."""
 
 from datetime import UTC, datetime
+from ipaddress import IPv4Address
 
 from netops_sentinel.actions.approval import Approval, ApprovalService
 from netops_sentinel.actions.models import (
@@ -94,7 +95,7 @@ class ControlledActionExecutor:
             Session(
                 subscriber_id=subscriber_id,
                 online=True,
-                ip_address="198.51.100.42",
+                ip_address=IPv4Address("198.51.100.42"),
                 started_at=recovery_time,
                 traffic_bytes=4096,
             )
