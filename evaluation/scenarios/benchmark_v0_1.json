@@ -1,0 +1,36 @@
+{
+  "version": "0.1",
+  "description": "Deterministic reference scenarios for the NetOps Sentinel mini benchmark.",
+  "scenarios": [
+    {
+      "scenario_id": "invalid_credentials",
+      "incident_id": "BENCH-0001",
+      "subscriber_id": "DEMO-100042",
+      "request": "Customer has no Internet access. All ONT indicators appear normal.",
+      "fixture": "hero_invalid_credentials",
+      "expected_root_cause": "invalid_credentials",
+      "expected_status": "waiting_approval",
+      "expected_action": "request_credential_reset"
+    },
+    {
+      "scenario_id": "suspended_account",
+      "incident_id": "BENCH-0002",
+      "subscriber_id": "DEMO-200001",
+      "request": "Check why this FTTH subscriber cannot access the service.",
+      "fixture": "suspended_account",
+      "expected_root_cause": "suspended",
+      "expected_status": "escalated",
+      "expected_action": "escalate_for_investigation"
+    },
+    {
+      "scenario_id": "unknown_condition",
+      "incident_id": "BENCH-0003",
+      "subscriber_id": "DEMO-300001",
+      "request": "Investigate this subscriber connectivity issue.",
+      "fixture": "unknown_condition",
+      "expected_root_cause": "unknown",
+      "expected_status": "escalated",
+      "expected_action": null
+    }
+  ]
+}
